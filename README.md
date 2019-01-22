@@ -1,10 +1,14 @@
-# Simple script PostgreSQL backup
+# Really simple pg backup
 
-Find a very simple backup solution for PostgreSQL still seems as big problem in these days. I wanted a solution that is:
+## Motivation
+
+Find a very simple backup solution for PostgreSQL still seems as big problem in these days. We wanted a solution that is:
 
 1. Very simple & easy to maintain.
 2. Could work very well on smaller projects and with small databases.
-3. Using a simple pg_dump and instead of leaving a dump file on a server, automatically move it to AWS S3.
+3. Using a simple pg_dump and instead of leaving a dump file on a server, automatically moves it to AWS S3.
+
+## Installation
 
 ### 1. Install AWS CLI
 
@@ -33,7 +37,7 @@ And then add to .pgpass file info in this format (port is by default 5432):
 server:port:database:username:password
 ```
 
-### 3. Installation
+### 3. Script
 
 1. Copy this repository to home repository on the server.
 2. Edit "Configuration variables" section in `backup.sh`.
