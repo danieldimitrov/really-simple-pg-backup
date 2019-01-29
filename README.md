@@ -45,9 +45,9 @@ server:port:database:username:password
 
 ### 4. Crontab
 
-Edit via `sudo crontab -e` on last line:
+Edit via `crontab -e` on last line:
 ```
-0 23 * * * sh /PATH_TO_SCRIPT/backup.sh
+10 23 * * * sh -c "/PATH_TO_SCRIPT/backup.sh"
 ```
 
 ## Restore
