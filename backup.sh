@@ -8,5 +8,5 @@ PG_USER=USER_NAME #name of the user in PG
 DB_NAME=USER_NAME #name of the DB in PG
 
 pg_dump -U $PG_USER -w -h localhost $DB_NAME > $DEST
-aws s3 cp $DEST s3://$BUCKET_NAME/$FILE_NAME
+/home/LINUX_USERNAME/.local/bin/aws s3 cp $DEST s3://$BUCKET_NAME/$FILE_NAME
 rm $DEST
